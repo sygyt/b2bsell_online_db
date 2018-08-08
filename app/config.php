@@ -3,7 +3,7 @@
 $host="online-contact-database:europe-west1:serdbcontact";
 $user="admin";
 $passwd="admin";
-$db="serdbcontact";
+$db="ser";
 $uploadpath="fiver/ser/upload";
 $imagepath="image";
 $rec_limit = 50; // set value for page limit

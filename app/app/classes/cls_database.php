@@ -13,7 +13,7 @@
 				$hostname='online-contact-database:europe-west1:serdbcontact';
 				$username='admin';
 				$password='admin';
-				$datebase='serdbcontact';
+				$datebase='ser';
 			if($this->db_link = @mysql_connect($hostname, $username, $password)){
 				//"Error 1001
 				if(@mysql_select_db($datebase)){
