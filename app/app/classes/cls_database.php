@@ -10,7 +10,7 @@
 		public function __construct()
 		{
 	
-				$hostname='mysql:unix_socket=/cloudsql/serdbcontact;dbname=ser';
+				$hostname='mysql:unix_socket=/cloudsql/online-contact-database:europe-west1:serdbcontact;dbname=ser';
 				$username='admin';
 				$password='admin';
 				$datebase='ser';

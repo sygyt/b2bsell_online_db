@@ -1,6 +1,6 @@
 <?php
 
-$host="mysql:unix_socket=/cloudsql/serdbcontact;dbname=ser";
+$host="mysql:unix_socket=/cloudsql/online-contact-database:europe-west1:serdbcontact;dbname=ser";
 $user="admin";
 $passwd="admin";
 $db="ser";
