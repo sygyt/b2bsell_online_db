@@ -10,7 +10,7 @@
 		public function __construct()
 		{
 	
-				$hostname='online-contact-database:europe-west1:serdbcontact';
+				$hostname='104.199.2.231';
 				$username='admin';
 				$password='admin';
 				$datebase='ser';

@@ -1,6 +1,6 @@
 <?php
 
-$host="online-contact-database:europe-west1:serdbcontact";
+$host="104.199.2.231";
 $user="admin";
 $passwd="admin";
 $db="ser";
