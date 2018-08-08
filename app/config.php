@@ -1,13 +1,12 @@
 <?php
 
-$host="localhost";
-$user="root";
-$passwd="cait123";
-$db="ser";
+$host="online-contact-database:europe-west1:serdbcontact";
+$user="admin";
+$passwd="admin";
+$db="serdbcontact";
 $uploadpath="fiver/ser/upload";
 $imagepath="image";
 $rec_limit = 50; // set value for page limit
-
 
 
  $conn = new mysqli($host,$user, $passwd, $db);
