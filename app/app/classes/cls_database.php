@@ -10,12 +10,11 @@
 		public function __construct()
 		{
 	
-				$hostname='mysql:unix_socket=/cloudsql/online-contact-database:europe-west1:serdbcontact;dbname=ser';
+				$hostname='104.199.2.231';
 				$username='admin';
 				$password='admin';
 				$datebase='ser';
-			//if($this->db_link = @mysql_connect($hostname, $username, $password)){
-            if($this->db_link = @mysql_connect(null, 'admin' ,'admin', 'ser',null,'/cloudsql/online-contact-database:europe-west1:serdbcontact')){
+			if($this->db_link = @mysql_connect($hostname, $username, $password)){
 				//"Error 1001
 				if(@mysql_select_db($datebase)){
 				
