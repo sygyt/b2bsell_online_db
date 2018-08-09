@@ -1,6 +1,6 @@
 <?php
 
-$host="mysql:unix_socket=/cloudsql/online-contact-database:europe-west1:serdbcontact;dbname=ser";
+$host="online-contact-database:europe-west1:serdbcontact";
 $user="admin";
 $passwd="admin";
 $db="ser";
@@ -9,7 +9,8 @@ $imagepath="image";
 $rec_limit = 50; // set value for page limit
 
 
- $conn = new mysqli($host,$user, $passwd, $db);
+ //$conn = new mysqli($host,$user, $passwd, $db);
+   $conn = new mysqli(null, 'admin' ,'admin', 'ser',null,'/cloudsql/online-contact-database:europe-west1:serdbcontact');
 if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}else{

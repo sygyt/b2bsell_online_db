@@ -14,7 +14,8 @@
 				$username='admin';
 				$password='admin';
 				$datebase='ser';
-			if($this->db_link = @mysql_connect($hostname, $username, $password)){
+			//if($this->db_link = @mysql_connect($hostname, $username, $password)){
+            if($this->db_link = @mysql_connect(null, 'admin' ,'admin', 'ser',null,'/cloudsql/online-contact-database:europe-west1:serdbcontact')){
 				//"Error 1001
 				if(@mysql_select_db($datebase)){
 				
