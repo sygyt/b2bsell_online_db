@@ -9,7 +9,8 @@ $imagepath="image";
 $rec_limit = 50; // set value for page limit
 
 
- $conn = new mysqli($host,$user, $passwd, $db);
+ $conn = new mysqli(null, 'admin', null, 'ser', null, 'online-contact-database:europe-west1:serdbcontact'
+ );
 
 if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
