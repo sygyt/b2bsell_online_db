@@ -9,7 +9,7 @@ $imagepath="image";
 $rec_limit = 50; // set value for page limit
 
 
- $conn = new mysqli(null,$user, $passwd, $db,0, $host);
+ $conn = new mysqli(null,$user, null, $db,0, $host);
 
  if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
