@@ -9,14 +9,14 @@
 		
 		public function __construct()
 		{
-	
-				$hostname='104.199.2.231';
-				$username='admin';
-				$password='admin';
-				$datebase='ser';
-			if($this->db_link = @mysql_connect($hostname, $username, $password)){
+
+            $host=getenv('MYSQL_DSN');
+            $user=getenv('MYSQL_USER');
+            $passwd=getenv('MYSQL_PASSWORD');
+            $datebase='ser';
+			if($this->db_link = @mysql_connect(null,$user, "admin", $db,0, $host)){
 				//"Error 1001
-				if(@mysql_select_db($datebase)){
+				/*if(@mysql_select_db($datebase)){
 				
 				}else{
 					WriteLog::append("<strong>Error 1001 : Cannot find the Database</strong>", "system_error_log.txt");
@@ -26,7 +26,7 @@
 					$redpath="Location: ".$base_url."DatabaseUnabletConnect.php";
 					header($redpath);
 					// or die ("<strong>Error 1001 : Cannot find the Database</strong>");
-				}
+				}*/
 			}else{
 				WriteLog::append("<strong>Error 1002 : DatabaseUnabletConnect</strong>", "system_error_log.txt");
 				//header("Location:DatabaseUnabletConnect.php");
