@@ -1,26 +1,26 @@
 <?php
-/*
-$host="104.199.2.231";
-$user="admin";
-$passwd="admin";
+
+$host=getenv('MYSQL_DSN');
+$user=getenv('MYSQL_USER');
+$passwd=getenv('MYSQL_PASSWORD');
 $db="ser";
 $uploadpath="fiver/ser/upload";
 $imagepath="image";
 $rec_limit = 50; // set value for page limit
 
 
- $conn = new mysqli(null, 'root', null, 'ser', null, '/cloudsql/online-contact-database:europe-west1:serdbcontact');
+ $conn = new mysqli($host,$user, $passwd, $db);
 
-if ($conn->connect_error) {
+ if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
 	}else{
 		//echo "Connected ds";
 		//mysqli_set_charset($conn,"utf8");
 	//echo "Connected successfully";
 	}
-*/
-// function to return the PDO instance
 
+// function to return the PDO instance
+/*
     // Connect to CloudSQL from App Engine.
     $dsn = getenv('MYSQL_DSN');
     $user = getenv('MYSQL_USER');
@@ -38,5 +38,6 @@ if ($conn->connect_error) {
     {
         echo "Connection failed: " . $e->getMessage();
     }
+*/
 
 ?>
