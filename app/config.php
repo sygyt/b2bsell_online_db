@@ -38,5 +38,5 @@ if ($conn->connect_error) {
     {
         echo "Connection failed: " . $e->getMessage();
     }
-};
+
 ?>
