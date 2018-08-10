@@ -1,5 +1,5 @@
 <?php
-
+/*
 $host="104.199.2.231";
 $user="admin";
 $passwd="admin";
@@ -18,5 +18,25 @@ if ($conn->connect_error) {
 		//mysqli_set_charset($conn,"utf8");
 	//echo "Connected successfully";
 	}
+*/
+// function to return the PDO instance
 
+    // Connect to CloudSQL from App Engine.
+    $dsn = getenv('MYSQL_DSN');
+    $user = getenv('MYSQL_USER');
+    $password = getenv('MYSQL_PASSWORD');
+    if (!isset($dsn, $user) || false === $password) {
+        throw new Exception('Set MYSQL_DSN, MYSQL_USER, and MYSQL_PASSWORD environment variables');
+    }
+    try {
+        $conn = new PDO($dsn, $user, $password);
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+    }
+    catch(PDOException $e)
+    {
+        echo "Connection failed: " . $e->getMessage();
+    }
+};
 ?>
